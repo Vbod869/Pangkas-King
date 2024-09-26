@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scheduleNotification(appointmentTime);
 
     // Create WhatsApp booking message
-    const bookingMessage = `Booking Details:%0ADate: ${date}%0ATime: ${time}%0AService: ${service}`;
+    const bookingMessage = `Booking Details:%0ATanggal: ${date}%0AJam: ${time}%0AStyle: ${service}`;
     const bookingLink = `https://wa.me/+6282258706323?text=${bookingMessage}`;
     window.open(bookingLink, '_blank');
 
