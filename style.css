@@ -303,6 +303,148 @@
   #contact button:hover {
     background: #e67e22;
   }
+
+  .review-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    width: 100%; /* Full width */
+    padding: 0.5rem; /* Padding */
+    margin: 0.5rem 0; /* Vertical spacing */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.review-form button {
+    padding: 0.5rem 1rem; /* Padding for button */
+    background: #376fa2; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.review-form button:hover {
+    background: #4a8bc2; /* Darker on hover */
+}
+
+
+.custom-select {
+  position: relative;
+  width: 100%; /* Full width */
+}
+
+.selected {
+  background: #fff; /* White background */
+  padding: 0.5rem; /* Padding */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.options {
+  display: none; /* Initially hidden */
+  position: absolute;
+  background: #fff; /* Background color */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1; /* Layer above other elements */
+  width: 100%; /* Full width */
+}
+
+.options.show {
+  display: block; /* Show options when toggled */
+}
+
+.option {
+  padding: 0.5rem; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.option:hover {
+  background: #f4f4f4; /* Background on hover */
+}
+
+
+  /* Reviews Section Styles */
+#reviews {
+  padding: 2rem 1rem;
+  background: #f4f4f4; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#reviews h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.review-container {
+  max-width: 600px; /* Max width for the review container */
+  margin: auto; /* Center the review container */
+}
+
+/* Review Styles */
+.review {
+  position: relative; /* Ensure the button can be positioned absolutely */
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.button-container {
+  position: absolute; /* Position the container absolutely */
+  bottom: 10px; /* Distance from the bottom */
+  right: 10px; /* Distance from the right */
+}
+
+.edit-review {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-review:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+
+/* Review Header Styles */
+.review-header {
+  display: flex; /* Flex for layout */
+  justify-content: space-between; /* Space between name and stars */
+  align-items: center; /* Center vertically */
+}
+
+/* User Name Styles */
+.user-name {
+  font-weight: bold; /* Bold for the user name */
+  color: #376fa2; /* User name color */
+}
+
+/* Stars Styles */
+.stars {
+  color: #ffcc00; /* Gold color for stars */
+}
+
+.stars i {
+  margin-left: 2px; /* Space between stars */
+}
+
   
   /* Chat Section */
   #chat {
@@ -445,4 +587,24 @@
   main {
     flex: 1;
   }
+
+  .notification {
+    position: fixed;
+    top: 20px; /* Position it at the top */
+    left: 80%;
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeIn 0.5s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
   

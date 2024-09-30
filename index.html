@@ -74,30 +74,66 @@
         </section>
 
         <!-- Chat Section -->
-        <section id="chat">
-            <h2>Chat with Us</h2>
-            <div class="chat-container">
-                <div class="chat-header">
-                    <h3>Ngobrol dengan Tim Kami</h3>
+        <section id="reviews">
+            <h2>Ulasan Pelanggan</h2>
+            <div class="review-container">
+                <div class="review">
+                    <div class="review-header">
+                        <span class="user-name">Khalif</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p>Hasil Cukuran nya Rapih recomend banget deh...</p>
                 </div>
-                <div class="chat-body">
-                    <ul>
-                        <li>
-                            <span>Khalif</span>
-                            <p>Halo, ada yang bisa saya bantu?</p>
-                        </li>
-                        <li>
-                            <span>Ahmed</span>
-                            <p>Hai, saya perlu janji potong rambut.</p>
-                        </li>
-                    </ul>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="user-name">Akmal</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Recomend banget cukur disini harga pelajar.</p>
                 </div>
-                <div class="chat-footer">
-                    <input type="text" placeholder="Type a message" />
-                    <button>Send</button>
-                </div>
+                
             </div>
+        <!-- Add this in your HTML where you want to display total stars -->
+            <div id="total-stars">Total Stars: 0</div>
+
+            <!-- Review Submission Form -->
+            <div class="review-form">
+                <h3>Tambahkan Ulasan Anda</h3>
+                <input type="text" id="reviewer-name" placeholder="Nama Anda" required />
+                <textarea id="review-text" placeholder="Tulis ulasan..." required></textarea>
+                <div class="rating">
+                    <label>Rating:</label>
+                    <div class="custom-select">
+                        <div class="selected" id="selected-rating">Pilih Rating</div>
+                        <div class="options" id="rating-options">
+                            <div class="option" data-value="5">⭐️⭐️⭐️⭐️⭐️</div>
+                            <div class="option" data-value="4">⭐️⭐️⭐️⭐️</div>
+                            <div class="option" data-value="3">⭐️⭐️⭐️</div>
+                            <div class="option" data-value="2">⭐️⭐️</div>
+                            <div class="option" data-value="1">⭐️</div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="review-rating" required /> <!-- Hidden input to store the selected value -->
+                </div>
+                <button id="submit-review">Kirim Ulasan</button>
+            </div>
+            
+            
         </section>
+        
+        
 
         <!-- Booking Section -->
         <section id="booking">
