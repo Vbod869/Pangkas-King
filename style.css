@@ -107,7 +107,7 @@
   }
   
   /* Services Section */
-#services {
+  #services {
     padding: 2rem 1rem;
     background: #f4f4f4;
     position: relative;
@@ -117,6 +117,7 @@
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2rem;
+    color: #376fa2; /* Blue heading */
 }
 
 #services ul {
@@ -133,7 +134,56 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, animation 0.5s;
+    text-align: center;
+    color: #000;
 }
+
+/* Apply red, white, and blue to individual list items */
+#services ul li:nth-child(1) {
+    background: #ff0000; /* Red */
+    color: #fff; /* White text */
+}
+
+#services ul li:nth-child(2) {
+    background: #fff; /* White */
+    color: #000; /* Black text */
+}
+
+#services ul li:nth-child(3) {
+    background: #376fa2; /* Blue */
+    color: #fff; /* White text */
+}
+
+#services ul li:nth-child(4) {
+    background: #ff0000; /* Red */
+    color: #fff; /* White text */
+}
+
+#services ul li:nth-child(5) {
+    background: #fff; /* White */
+    color: #000; /* Black text */
+}
+
+#services ul li:nth-child(6) {
+    background: #376fa2; /* Blue */
+    color: #fff; /* White text */
+}
+
+#services ul li:nth-child(7) {
+  background: #ff0000; /* Red */
+  color: #fff; /* White text */
+}
+
+#services ul li:nth-child(8) {
+  background: #fff; /* White */
+  color: #000; /* Black text */
+}
+
+#services ul li:nth-child(9) {
+  background: #376fa2; /* Blue */
+  color: #fff; /* White text */
+}
+
 
 @keyframes moveUpDown {
     0% { transform: translateY(0); }
@@ -153,32 +203,63 @@
 }
 
 /* Running Text Animation */
+/* Running Text Animation */
+/* Running Text Animation */
+/* Running Text Animation with Smooth Moving Colors */
 .running-text-container {
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0; /* Adjust based on where you want it */
-    left: 0;
-    background: #f4f4f4;
-    padding: 0.5rem 0;
-    z-index: 1; /* Ensure it stays above other content if needed */
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0;
+  z-index: 1; /* Ensure it stays above other content */
+  
+  /* Smooth gradient transition */
+  background: linear-gradient(to right, #ff0000, #ffffff, #376fa2);
+  background-size: 300%; /* Allows the gradient to move smoothly */
+  animation: gradientMove 15s ease-in-out infinite; /* Smooth movement of colors */
 }
 
+/* Smooth Moving Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Running Text */
 .running-text {
-    display: flex;
-    white-space: nowrap;
-    animation: scrollText 15s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  animation: scrollText 20s linear infinite; /* Slow down text scrolling for smoother effect */
 }
 
 .running-text p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff; /* White text for good contrast */
 }
 
+/* Smooth Scrolling Text Animation */
 @keyframes scrollText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+  0% { 
+    transform: translateX(100%);
+  }
+  100% { 
+    transform: translateX(-100%);
+  }
 }
+
+
+
 
   /* Contact Section */
   #contact {
